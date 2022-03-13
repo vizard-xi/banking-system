@@ -25,7 +25,7 @@ public class Transaction {
 		this.bank = bank;
 		this.accountNumber = accountNumber;
 
-		if (this.bank.authenticateUser(this.accountNumber, attemptedPin)) {
+		if (!this.bank.authenticateUser(this.accountNumber, attemptedPin)) {
 			throw new Exception();
 		}
 	}
