@@ -49,7 +49,6 @@ public class Bank implements BankInterface {
 	public boolean debit(Long accountNumber, double amount) {
 		Account account = this.getAccount(accountNumber);
 		if (account.getBalance() < amount) {
-//			System.out.println("Account " + account.getAccountNumber() + " should have insufficient funds.");
 			return false;
 		}
 		return account.debitAccount(amount);
